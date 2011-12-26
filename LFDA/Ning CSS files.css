@@ -1,0 +1,374 @@
+/* LFDA NOTE: Some of the styles here will be overridden by the custom style sheet for this portal */
+
+#xn_bar{
+    width:955px !important;
+    margin: 0 auto !important; 
+    background-color:#9CBFE9 !important;
+}
+
+#xn_bar a{
+    color:#000000 !important;
+    font-size:1.2em;
+}
+
+#xn_bar a:hover{
+    color:#000000 !important;
+    font-size:1.2em;
+}
+
+#xn_bar_menu_branding{
+     margin-left:-180px;
+     background-color: #413F42 !important;
+
+}
+
+
+
+#xg {
+    margin:0;
+    width:auto;
+}
+
+#xg_head {
+    width:auto;
+    background-color:#ffffff;
+    border-bottom:5px solid #C4D2DB;
+}
+
+#topheader{}
+
+#topheaderLogo {
+     width:200px;
+
+}
+
+#topheaderLogo img{
+margin:-20px 0px 0px 5px;
+position: absolute;
+width:189px;
+}
+
+#topheadercenter{
+float:left;
+margin:50px 0px 0px 270px;
+}
+
+#topheaderLogo #topheadercenter img{
+     padding: 60px 0px 0px 300px;
+     height:69px;
+     width:421px;
+}
+
+#topheaderleft{
+padding:20px 10px 0px 5px; 
+float:right;
+     
+
+
+}
+
+#xg_foot {
+    height:1.5em;
+}
+
+#xg_masthead p#xg_sitename {
+    font-weight:bold;
+    line-height:1.1em;
+    padding:15px 0 0 15px;
+}
+
+#xg_masthead p#xg_sitedesc {
+    height:1.5em;
+}
+
+.xg_module_head p.edit a.button {
+    bottom:-2px;
+}
+
+#xg_head #xg_masthead p#xg_sitename, #xg_head #xg_masthead p#xg_sitedesc, #xg_head ul, #xg_body, #xg_foot {
+    width:945px;
+    margin-left:auto;
+    margin-right:auto;
+    float:none;    
+}
+
+.xg_module_head h2 {
+    font-size:14px;
+    font-weight:normal;
+}
+
+#xg_navigation ul li a {
+    font-size: 10.5pt;
+    font-weight:bold;
+    color:#11479d;
+    padding:0 10px;
+}
+
+#xg_navigation ul li.this a {
+    background-color: #C4D2DB;
+    color:#ffffff;
+}
+
+ul.page_tabs li.this {
+  background-color:#ffffff;
+}
+
+.xg_module {
+    border:1px solid #C9D1DE;
+}
+
+.xg_module_body {
+    margin-bottom:0;
+}
+
+.xg_module_head {
+    border-bottom:1px solid #E7E7E7;
+    margin-bottom:0;
+}
+
+.xg_module_foot {
+    border-top:1px solid #E7E7E7;
+    background-color:#ffffff;
+}
+
+.xg_module_body .xg_module_body {
+    border-left:none;
+    border-right:none;
+    border-top:none;
+}
+
+.xg_widget_profiles_profile_show .xg_3col .xg_1col img.photo {
+    max-width:181px;
+}
+* html .xg_widget_profiles_profile_show .xg_3col .xg_1col img.photo {
+    width:expression(this.width >181 ? 181:true);
+}
+.xg_floating_container {
+    border-color:#a8acb0 !important;
+}
+
+/* *************************************************************************** */
+/* Custom Styles for LFDA                                                      */
+/*                                                                             */
+/* Incorporates any default NING styles for the "silver" theme and overrides   */
+/* as needed. Then, introduces custom classes.                                 */
+/* Note: The styles in this file will be applied to ALL pages in the network.  */
+/*       Custom styles for certain pages should be included in their own CSS   */
+/*       file and included via the lfda-main.js customization script.          */
+/* *************************************************************************** */
+
+body {
+	/* background: url(http://lfda-ning.s3.amazonaws.com/images/lfda-background.jpg) no-repeat; */
+	/* background-color: #719ED9; */
+        background-color: #3A6FB0;  
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+/* *************************************************************************** */
+/* OVERRIDE STYLES                                                             */
+/* *************************************************************************** */
+
+#xg_head {
+    margin-left:auto;
+    margin-right:auto;	
+    width:955px;	
+    background-color:#ffffff;
+    border-bottom: none;
+}
+
+#xg_masthead {
+	height:173px;	
+        background-color: #558ED3;
+}
+
+/* start customization for the main navigation */
+#xg_navigation {
+	background-color: #e1e1e1; 
+	background: url(http://lfda-ning.s3.amazonaws.com/images/lfda-top-menu-bg.jpg) repeat-x;
+	margin-top: 0px;
+}
+
+.xg_subtab {
+	color: #11478C; 
+	background-color: #e1e1e1; 	
+	background: url(http://lfda-ning.s3.amazonaws.com/images/lfda-top-menu-bg.jpg) repeat-x;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:10pt;	
+}
+
+#xg_navigation ul li a {
+    color:#11478C;
+    padding:0 10px;
+	font-weight: 500;
+}
+
+#xg_navigation ul li.this a {
+    background-color: #e1e1e1;
+	background: url(http://lfda-ning.s3.amazonaws.com/images/lfda-top-menu-bg.jpg) repeat-x;	
+    color:#11478C;
+	font-weight: 500;	
+}
+
+/* Start customization to style the content area */
+#xg_body {
+	background-color: #8BBCFE;
+	/* background: url(http://lfda-ning.s3.amazonaws.com/images/lfda-content-bg.jpg) repeat-x;		*/
+}
+
+.xg_module {
+	border: none;
+}
+
+/* *************************************************************************** */
+/* LFDA custom classes                                                         */
+/* *************************************************************************** */
+
+/* LFDA Home Page */
+.xg_module_body.lfda_hp_intro {
+	/* Applies to elements that have BOTH the classes here! */
+	/* LFDA HP Top Intro */
+	background:transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	font-size: 14pt;
+	font-weight: bold;
+	border: none;
+}
+
+/* Content boxes that go the entire width */
+
+.xg_module_head.lfda_hp_contentBox {
+	/* Applies to elements that have BOTH the classes here! */
+	/* LFDA HP Issue Feature Box - Title Background */
+	background: url(http://lfda-ning.s3.amazonaws.com/images/lfda-content-area-title-bg.jpg) repeat-x;
+}
+
+.xg_module_head.lfda_hp_contentBox h2 {
+	/* LFDA HP Issue Feature Box - Title Text */	
+	color: #11478C; 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12pt;		
+	font-weight:bold;
+	margin: -5px 0px 0px;
+}
+
+.xg_module_body.lfda_hp_contentBox {
+	/* Applies to elements that have BOTH the classes here! */
+	/* LFDA HP Issue Feature Box - Content Box */
+	border: 1px solid #97b0dd;
+	background: url(http://lfda-ning.s3.amazonaws.com/images/lfda-content-area-bg.jpg) repeat-x;
+	background-color: #FFF;	
+	margin: -5px 0px 0px 0px;
+}
+
+/* Home Page Content Boxes - 1/2 size */
+
+.xg_module_head.lfda_hp_contentBox_stack {
+	/* Applies to elements that have BOTH the classes here! */
+	/* LFDA HP Issue Feature Box - Title Background */
+	background: url(http://lfda-ning.s3.amazonaws.com/images/lfda-content-area-title-bg.jpg) repeat-x;
+	width: 370px;
+	padding-left: 0px; 
+	padding-right: 0px;	
+}
+
+.xg_module_head.lfda_hp_contentBox_stack h2 {
+	/* LFDA HP Issue Feature Box - Title Text */	
+	color: #11478C; 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12pt;		
+	font-weight:bold;
+	margin: -5px 0px 0px;
+}
+
+.xg_module_body.lfda_hp_contentBox_stack {
+	/* Applies to elements that have BOTH the classes here! */
+	/* LFDA HP Issue Feature Box - Content Box */
+	border: 1px solid #97b0dd;
+	background-color: #fdfeff;
+	background: url(http://lfda-ning.s3.amazonaws.com/images/lfda-content-area-bg.jpg) repeat-x;
+	margin: -5px 0px 0px 0px;
+	width: 370px;
+	padding-left: 0px; 
+	padding-right: 0px;
+}
+
+.xg_module_foot.lfda_hp_contentBox_stack {
+	width: 370px;	
+	padding-left: 0px; 
+	padding-right: 0px;	
+}
+
+.lfda_hp_contentBox_stack {
+	clear:none;
+	float:left;
+	width: 370px;
+}
+
+.lfda_hp_contentBox_stack .feed-timestamp {
+	/* In a stack layout, we need to fix the 
+	   timestamp for the activity feed
+	*/
+	left:280px;	
+}
+
+/* Discussion Forum / Get Local Styles */
+.lfda_getlocal_intro {
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	font-size: 10pt;
+	font-weight: bold;	
+}
+
+/* Discussion Forum / Get Local Styles */
+.lfda_discussissues_intro {
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	font-size: 10pt;
+	font-weight: bold;	
+}
+
+#lfda-newmember {
+	display: block;	
+}
+
+#lfda-newmember span {
+	background: url(http://lfda-ning.s3.amazonaws.com/images/NewSignupIcon_off.png) no-repeat;		
+	display:block;
+	color: #fff;
+	cursor: pointer;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.09em;
+	height: 200px;
+	line-height: 1.5em;
+	text-align: center;
+	left: 0px;
+}
+
+#lfda-newmember span.on {
+	background: url(http://lfda-ning.s3.amazonaws.com/images/NewSignupIcon_on.png) no-repeat;	
+}
+
+#sponsor-thank-you{
+font-size: 16px;
+text-align: center;
+}
+
+#sponsor-box-blueBG{
+
+}
+
+#sponsor-box-blueBG table{
+width:500px;
+
+}
+
+#sponsor-box-blueBG td{
+padding:0px 0px 0px 0px !important;
+
+}
+
+#sponsor-box-blueBG img{
+margin:0px 0px 0px 0px !important;
+
+}

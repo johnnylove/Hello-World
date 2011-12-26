@@ -243,6 +243,9 @@ function outputBannerCode() {
 					"<div id=\"topheaderLogo\"><a href=\"http://www.livefreeordiealliance.org\"> <img src=\"" + assetPath + "/images/townhall-logo-V2.png\" width=\"189\" height=\"192\" border=\"0\" /></a>" +
 					"</div>" +
 					"<div id=\"topheadercenter\"><img src=\"" + assetPath + "/images/LFDA_header_text_white.png\" width=\"421\" height=\"69\" border=\"0\" />" +
+					"<br />"+
+					"<iframe src=\"http://lfda-ning.s3.amazonaws.com/lfda-townhall-sponsorbox.html" >"+
+					"</iframe>" +					
 					"</div>" +
 					"<div id=\"topheaderleft\"><iframe src=\"http://www.facebook.com/plugins/like.php?app_id=251942714836926&amp;href=https%3A%2F%2Fwww.facebook.com%2FLiveFreeorDieAlliance&amp;send=false&amp;&amp;width=150&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21\" onclick=\"linkObject.href(http://www.livefreeordiealliance.org)\" scrolling=\"no\" frameborder=\"0\" style=\"border:none; overflow:hidden; width:160px; height:55px; float:left; \" allowTransparency=\"true\" >"+
 					"</iframe>" +	

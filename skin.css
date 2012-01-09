@@ -2552,7 +2552,7 @@ margin-left:-5px;
 
 .BluecontainerBoxInner .candidate-news
 {
-margin:5px 5px 40px 5px;
+margin:5px 5px 25px 5px;
 }
 
 .ie7 .BluecontainerBoxInner .candidate-news
@@ -4667,6 +4667,8 @@ height:510px;
 { 
     border-top: 1px solid #B0C1E2;
     text-align: right;
+	float:right;
+	width:265px;
 		
 }
 

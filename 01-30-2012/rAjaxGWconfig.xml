@@ -1,0 +1,1366 @@
+﻿<actions>
+  <action>
+    <!-- Required. Actions names must be Unique!!-->
+    <name>eric</name>
+    <!-- Required. What is the content type for the output. -->
+    <type>text/html</type>
+    <!-- Required. The URL to fetch. MUST return HTML. -->
+    <url>http://ericsoto.net/</url>
+    <!-- 
+       Required. The selectors you wish to desire to pull from the HTML.
+       The syntax is based on jQuery syntax 'loosely'
+       # - selects an ID, . - selects a class, or an element, like a 'p' for <p> tag
+       More than one selector selects recursively further drilling down into the DOM
+       Class attributes in HTML allow more than one class. To select those, we use 
+       '.class1.class2' (no in between space)
+    -->
+    <selectors>#siteTitle</selectors>
+    <!-- For attributes (like class) that allow more than one value, setting selectany to
+         1 will match any one selector as "part" of the attribute value. Setting to 0
+         will require an exact match in value for any one selector. 
+         For example: with class="some someother"
+         selectany=0 will ONLY match the selector ".some.someother" (contains BOTH classes)
+         selectany=1 will match either the selector ".some" or ".someother" (contains EITHER class)
+         HOWEVER, use of selectany cannot be used with the 'BOTH' syntax ".some.someother"
+         because it will never achieve a match!
+    -->
+    <selectany>0</selectany>
+    <!-- Optional. Wrap the output in the element specified below. -->
+    <wrap></wrap>
+    <!-- Optional. If wrap is enabled, the element will be assigned this class. -->
+    <class></class>
+    <!-- Optional. If wrap is enabled, the element will be assigned this id. -->
+    <id></id>
+    <!-- Optional. Set relativeurlfix to the PATH to add inside the HTML to those URLs that may be relative. -->
+    <!-- This MUST end in the "/" and should be a folder path! -->
+    <relativeurlfix>http://ericsoto.net/</relativeurlfix>
+    <!-- Allows for a custom message in the event of No Matches. -->
+    <nomatchmessage><![CDATA[
+		Message Here - HTML is VALID as long as it is inside a CDATA block!!!
+	]]></nomatchmessage>
+  </action>
+
+  <action>
+    <name>ning-blog-hp-summary</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/</url>
+    <selectors>.module_blog .blogpost</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/</relativeurlfix>
+	<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+    <nomatchmessage>The Live Free or Die Alliance Website Forum is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+  </action>
+  
+  <action>
+    <name>ning-blog-hp-summary_WSummary</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.org/profiles/blog/list/</url>
+    <selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+	<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+    <nomatchmessage>The Live Free or Die Alliance Website Forum is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+  </action>  
+  
+  <action>
+    <name>ning-blog-featured</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.org/profiles/blog/list?promoted=1</url>
+    <selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+	<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+    <nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+  </action>  
+  
+    <action>
+    <name>ning-blog-tagged-RGGI</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.org/profiles/blog/list?tag=RGGI</url>
+    <selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+	<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+    <nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+  </action> 
+  
+      <action>
+    <name>ning-blog-tagged-NorthernPass</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.org/profiles/blog/list?tag=northern+pass</url>
+    <selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+	<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+    <nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+  </action> 
+  
+  
+    <action>
+    <name>ning-blog-tagged-RightToWork</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.org/profiles/blog/list?tag=Right+to+Work</url>
+    <selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+	<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+    <nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+  </action> 
+  
+    <action>
+		<name>ning-blog-list-CollectiveBarganing</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Collective+Bargaining</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action> 
+  
+	<action>
+		<name>ning-blog-list-ObamaCare</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=ObamaCare</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+	<action>
+		<name>ning-blog-list-Gambling</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=gambling</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+  
+	<action>
+		<name>ning-blog-list-Shoreland</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Shoreland</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+	<action>
+		<name>ning-blog-list-Seatbelt</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=seat+belt</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+	<action>
+		<name>ning-blog-list-OldMan</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Old+Man</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+	<action>
+		<name>ning-blog-list-PropertyTax</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Property+Tax</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+	<action>
+		<name>ning-blog-list-BoatSpeedLimits</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=boat+speed+limits</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+	<action>
+		<name>ning-blog-list-SchoolFunding</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=school+funding</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>		
+  
+	<action>
+		<name>ning-blog-list-Scrubber</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=scrubber</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+	<action>
+		<name>ning-blog-list-LLCTax</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=llc+tax</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+	<action>
+		<name>ning-blog-list-DeathPenalty</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=death+penalty</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+	<action>
+		<name>ning-blog-list-EvergreenClause</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=evergreen</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+	<action>
+		<name>ning-blog-list-AdulteryLaw</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Adultery+Law</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+	<action>
+		<name>ning-blog-list-AdulteryLaw</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Adultery+Law</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+	<action>
+		<name>ning-blog-list-AthleticTrainers</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=athletic+trainers</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+	<action>
+		<name>ning-blog-list-BullyLaw</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=bully</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+	<action>
+		<name>ning-blog-list-CarInsurance</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=car+insurance</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+	<action>
+		<name>ning-blog-list-CullingGeese</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=culling+geese</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+	<action>
+		<name>ning-blog-list-ConsumerProtection</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Consumer+Protection</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+	<action>
+		<name>ning-blog-list-DecriminalizeMarijuana</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=marijuana</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+
+	<action>
+		<name>ning-blog-list-CampaignSpendingReform</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Campaign+Spending</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+	<action>
+		<name>ning-blog-list-CastleDoctrine</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Castle+Doctrine</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+	<action>
+		<name>ning-blog-list-CommuterRail</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Commuter+Rail</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+	<action>
+		<name>ning-blog-list-CriminalRecordsAnnulment</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Annulment</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>		
+	
+	<action>
+		<name>ning-blog-list-DemographicsShift</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Demographics</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+	<action>
+		<name>ning-blog-list-DistractedDriving</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Distracted+Driving</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+	<action>
+		<name>ning-blog-list-DrinkingAge</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Drinking+Age</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+	<action>
+		<name>ning-blog-list-DriverPrivacyAct</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Driver+Privacy+Act</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+
+	<action>
+		<name>ning-blog-list-EminentDomain</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Eminent+Domain</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+	<action>
+		<name>ning-blog-list-GunLaws</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Gun+Laws</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+
+	<action>
+		<name>ning-blog-list-ImmigrationReform</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Immigration+Reform</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+	<action>
+		<name>ning-blog-list-LegislativeProcess</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Legislative+Process</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+	<action>
+		<name>ning-blog-list-Localmealsroomtax</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=local+meals</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+	<action>
+		<name>ning-blog-list-LymeDiseaseBill</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Lyme+Disease</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+
+	<action>
+		<name>ning-blog-list-MotorcycleHelmetLaw</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Helmet+Law</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+	<action>
+		<name>ning-blog-list-NewTolls</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=tolls</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+	<action>
+		<name>ning-blog-list-ElectoralCollege</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Electoral+College</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+	<action>
+		<name>ning-blog-list-FutureofEarmarks</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Earmarks</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+
+	<action>
+		<name>ning-blog-list-GayMarriageRepeal</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Gay+Marriage+Repeal</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+	<action>
+		<name>ning-blog-list-HomeSprinkler</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Home+Sprinkler</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+	<action>
+		<name>ning-blog-list-LaterHighSchoolStarts</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Later+High+School+Starts</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+	<action>
+		<name>ning-blog-list-LocalSchoolBudgetPlanning</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=School+Budget</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+	<action>
+		<name>ning-blog-list-MedicinalMarijuana</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Medicinal+Marijuana</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+	<action>
+		<name>ning-blog-list-MedicinalMarijuana</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Medicinal+Marijuana</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+	
+  	<action>
+		<name>ning-blog-list-NegligentHikerLaw</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Negligent+Hiker+Law</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+		
+  	<action>
+		<name>ning-blog-list-NoChildLeftBehind</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=No+Child+Left+Behind</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+  	<action>
+		<name>ning-blog-list-PrisonReform</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Prison+Reform</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+  	<action>
+		<name>ning-blog-list-ParentalNotification</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Parental+Notification</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+	http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Repeal+17th+Amendment
+
+  	<action>
+		<name>ning-blog-list-Repeal17thAmendment</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Repeal+17th+Amendment</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+  	<action>
+		<name>ning-blog-list-Redistricting</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Redistricting</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+  	<action>
+		<name>ning-blog-list-RoadsideLitter</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Roadside+Litter</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+	
+  	<action>
+		<name>ning-blog-list-RoadwayErosion</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Roadway+Erosion</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+  	<action>
+		<name>ning-blog-list-PrescriptionDrugAbuse</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Prescription+Drug</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+  	<action>
+		<name>ning-blog-list-PublicEmployeeContracts</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Public+Employee+Contracts</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+  	<action>
+		<name>ning-blog-list-PropertyTaxforaScenicView</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Property+Tax+Scenic+View</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+
+  	<action>
+		<name>ning-blog-list-RetirementBenefits</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Retirement+Benefits</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+  	<action>
+		<name>ning-blog-list-RoadsideMemorials</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Roadside+Memorials</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+  	<action>
+		<name>ning-blog-list-StudentVote</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Student+Vote</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+  	<action>
+		<name>ning-blog-list-Top2PrimarySystem</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Primary+System</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+
+  	<action>
+		<name>ning-blog-list-WindFarms</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Wind+Farms</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+  	<action>
+		<name>ning-blog-list-TaxingNonprofits</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Taxing+Nonprofits</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+  	<action>
+		<name>ning-blog-list-VotingAge</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Voting+Age</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>
+	
+  	<action>
+		<name>ning-blog-list-TransparencyintheJCC</name>
+		<type>text/html</type>
+		<url>http://townhall.livefreeordiealliance.org/profiles/blog/list?q=Judicial+Conduct+Committee</url>
+		<selectors>.xg_module .xg_blog .xg_blog_list .xg_module_body</selectors>
+		<selectany>1</selectany>
+		<wrap></wrap>
+		<class></class>
+		<id></id>
+		<relativeurlfix>http://townhall.livefreeordiealliance.org/profiles/blog/list/</relativeurlfix>
+		<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+		<nomatchmessage>The Live Free or Die Alliance Website Blog is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+	</action>	
+	
+	
+	
+  <action>
+    <name>ning-events-upcoming</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.org/events/event/listUpcoming</url>
+    <selectors>.body_events_main .clist</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.org/events/event/listUpcoming/</relativeurlfix>
+	<!--<nomatchmessage>There are no Blog entries right now. Check back later.</nomatchmessage>-->
+    <nomatchmessage>The Live Free or Die Alliance Website Event List is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+  </action>  
+  
+  
+
+  <action>
+    <name>ning-event-hp-summary</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/</url>
+    <selectors>.module_events .xg_module_body</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/</relativeurlfix>
+    <nomatchmessage>There are no Events entries right now. Check back later.</nomatchmessage>
+  </action>
+
+  <action>
+    <name>ning-activity-hp-summary</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/</url>
+    <selectors>.xg_module_activity .feed-story</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/</relativeurlfix>
+	<!--<nomatchmessage>There is no activity right now. Check back later.</nomatchmessage>-->
+	<nomatchmessage>The Live Free or Die Alliance Website Forum is having technical difficulties and we are working to resolve the issue. Please check back later.</nomatchmessage>
+  </action>
+
+    <action>
+    <name>ning-discussion-hp-summary</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/</url>
+    <selectors>.module_forum .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/</relativeurlfix>
+    <nomatchmessage>There are no discussions right now. Check back later.</nomatchmessage>
+  </action>
+  
+  <action>
+    <name>ning-discussion-gambling</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/group/gambling</url>
+    <selectors>.module_forum .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/group/gambling/</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/group/gambling">Start one now.</a><br/>]]></nomatchmessage>
+  </action>  
+
+  <action>
+    <name>ning-discussion-cspa</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/group/cspa</url>
+    <selectors>.module_forum .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/group/cspa/</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/group/cspa">Start one now.</a><br/>]]></nomatchmessage>
+  </action>  
+
+  <action>
+    <name>ning-discussion-seatbelts</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/group/seatbelts</url>
+    <selectors>.module_forum .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/group/seatbelts/</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/group/seatbelts">Start one now.</a><br/>]]></nomatchmessage>
+  </action>    
+
+  <action>
+    <name>ning-discussion-OldManofTheMountain</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/group/OldManofTheMountain</url>
+    <selectors>.module_forum .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/group/OldManofTheMountain/</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/group/OldManofTheMountain">Start one now.</a><br/>]]></nomatchmessage>
+  </action>    
+
+  <action>
+    <name>ning-discussion-Propertytaxes</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/group/Propertytaxes</url>
+    <selectors>.module_forum .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/group/Propertytaxes/</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/group/Propertytaxes">Start one now.</a><br/>]]></nomatchmessage>
+  </action>    
+
+  <action>
+    <name>ning-discussion-SB2</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/group/SB2</url>
+    <selectors>.module_forum .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/group/SB2/</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/group/SB2">Start one now.</a><br/>]]></nomatchmessage>
+  </action>    
+
+  <action>
+    <name>ning-discussion-Schoolfunding</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/group/Schoolfunding</url>
+    <selectors>.module_forum .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/group/Schoolfunding/</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/group/Schoolfunding">Start one now.</a><br/>]]></nomatchmessage>
+  </action>    
+
+  <action>
+    <name>ning-discussion-Boatspeedlimits</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/group/Boatspeedlimits</url>
+    <selectors>.module_forum .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/group/Boatspeedlimits/</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/group/Boatspeedlimits">Start one now.</a><br/>]]></nomatchmessage>
+  </action>    
+
+  <action>
+    <name>ning-discussion-Scrubber</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/group/Scrubber</url>
+    <selectors>.module_forum .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/group/Scrubber/</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/group/Scrubber">Start one now.</a><br/>]]></nomatchmessage>
+  </action>    
+
+    <action>
+    <name>ning-discussion-rggi</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/group/rggi</url>
+    <selectors>.module_forum .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/group/rggi/</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/group/rggi">Start one now.</a><br/>]]></nomatchmessage>
+  </action>   
+
+  <action>
+    <name>ning-discussion-llctax</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/group/llctax</url>
+    <selectors>.module_forum .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/group/llctax</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/group/llctax">Start one now.</a><br/>]]></nomatchmessage>
+  </action>   
+  
+  <action>
+    <name>ning-discussion-dthplty</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/group/deathpenalty</url>
+    <selectors>.module_forum .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/group/deathpenalty</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/group/deathpenalty">Start one now.</a><br/>]]></nomatchmessage>
+  </action>   
+  
+  <action>
+    <name>ning-forum-candidates-for-nhs-1st</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/forum/topics/candidates-for-nhs-1st</url>
+    <selectors>#discussionReplies .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/forum/topics/candidates-for-nhs-1st</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/forum/topics/candidates-for-nhs-1st">Start one now.</a><br/>]]></nomatchmessage>
+  </action>   
+  
+  <action>
+    <name>ning-forum-candidates-for-nhs-2nd</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/forum/topics/candidates-for-nhs-2nd</url>
+    <selectors>#discussionReplies .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/forum/topics/candidates-for-nhs-2nd</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/forum/topics/candidates-for-nhs-2nd">Start one now.</a><br/>]]></nomatchmessage>
+  </action>  
+
+  <action>
+    <name>ning-forum-candidates-for-governor</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/forum/topics/candidates-for-governor</url>
+    <selectors>#discussionReplies .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/forum/topics/candidates-for-governor</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/forum/topics/candidates-for-governor">Start one now.</a><br/>]]></nomatchmessage>
+  </action>   
+
+   <action>
+    <name>ning-forum-candidates-for-nhs-us-senate</name>
+    <type>text/html</type>
+    <url>http://townhall.livefreeordiealliance.com/forum/topics/candidates-for-nhs-us-senate</url>
+    <selectors>#discussionReplies .xg_module_body .discussion</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://townhall.livefreeordiealliance.com/forum/topics/candidates-for-nhs-us-senate</relativeurlfix>
+    <nomatchmessage><![CDATA[There are no discussions right now. <a href="http://townhall.livefreeordiealliance.com/forum/topics/candidates-for-nhs-us-senate">Start one now.</a><br/>]]></nomatchmessage>
+  </action>    
+  
+<!-- 
+		This fb-wall action is not working. It appears that FB generates content based on JS, so the below
+		does not actually return the WALL for the profile.
+-->
+    <action>
+    <name>fb-wall</name>
+    <type>text/html</type>
+    <url>http://www.facebook.com/LiveFreeorDieAlliance</url>
+    <selectors>body</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://www.facebook.com/</relativeurlfix>
+    <nomatchmessage><![CDATA[Our Facebook wall is empty right now. ]]></nomatchmessage>
+  </action>   
+
+  <action>
+    <name>tw-timeline</name>
+    <type>text/html</type>
+    <url>http://twitter.com/NHLFDA</url>
+    <selectors>#timeline</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://www.twitter.com/</relativeurlfix>
+    <nomatchmessage><![CDATA[Our Twitter time line is empty right now. Check back later. ]]></nomatchmessage>
+  </action>   
+  
+  <action>
+    <name>2012-pres-news</name>
+    <type>text/html</type>
+    <url>http://www.livefreeordiealliance.org/PoliticalSpotlight/NHPresidentialPrimary/2012PresidentialElectionNews/tabid/1906/Default.aspx</url>
+    <selectors>.newsItem</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix></relativeurlfix>
+    <nomatchmessage><![CDATA[News is empty right now. Check back later. ]]></nomatchmessage>
+  </action>     
+
+  <action>
+    <name>kaya-demo</name>
+    <type>text/html</type>
+    <url>http://www.kayadevelopmentcenter.com/Responsible_Markets/html/index.php</url>
+    <selectors>.training-program-center</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix>http://www.kayadevelopmentcenter.com/Responsible_Markets/html/</relativeurlfix>
+    <nomatchmessage><![CDATA[No content now. Check back later. ]]></nomatchmessage>
+  </action>   
+  
+    <action>
+    <name>lfda-issues-library</name>
+    <type>text/html</type>
+    <url>http://www.livefreeordiealliance.org/Issues/IssuesLibrary/tabid/1871/Default.aspx</url>
+    <selectors>dnn_ctr14443_HtmlModule_lblContent</selectors>
+    <selectany>1</selectany>
+    <wrap></wrap>
+    <class></class>
+    <id></id>
+    <relativeurlfix></relativeurlfix>
+    <nomatchmessage><![CDATA[No content now. Check back later. ]]></nomatchmessage>
+  </action>  
+
+  
+  
+</actions>
